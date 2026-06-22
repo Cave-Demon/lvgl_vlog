@@ -21,3 +21,6 @@ sdkconfig.old
 # ESP-IDF specific
 managed_components/
 dependencies.lock
+
+# Third-party libraries (user needs to download these)
+components/lvgl/

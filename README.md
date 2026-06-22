@@ -48,7 +48,41 @@
 
 ## 快速开始
 
-### 1. 配置 Wi-Fi
+### 1. 克隆仓库
+
+```bash
+# 克隆仓库
+git clone https://github.com/Cave-Demon/lvgl_vlog.git
+cd lvgl_vlog
+```
+
+### 2. 获取 LVGL 库
+
+由于 LVGL 是第三方开源库，不包含在本仓库中，需要单独下载：
+
+**方法一：使用脚本（推荐）**
+
+Windows (PowerShell):
+```bash
+cd components
+.\get_lvgl.ps1
+```
+
+Linux/Mac:
+```bash
+cd components
+chmod +x get_lvgl.sh
+./get_lvgl.sh
+```
+
+**方法二：手动克隆**
+
+```bash
+cd components
+git clone --depth 1 https://github.com/lvgl/lvgl.git
+```
+
+### 4. 配置 Wi-Fi
 
 修改 `main/lvgl_display.c` 中的 Wi-Fi 配置：
 
@@ -57,7 +91,7 @@
 #define WIFI_PASS      "你的WiFi密码"
 ```
 
-### 2. 编译与烧录
+### 5. 编译与烧录
 
 使用 ESP-IDF 工具链编译和烧录：
 
@@ -66,13 +100,13 @@ idf.py build
 idf.py flash
 ```
 
-### 3. 查看串口日志
+### 6. 查看串口日志
 
 ```bash
 idf.py monitor
 ```
 
-### 4. 发送视频流
+### 7. 发送视频流
 
 在电脑上运行 UDP 发送程序，将屏幕数据发送到 ESP32 的 8080 端口。
 
