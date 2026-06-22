@@ -1,0 +1,23 @@
+# Build directories
+build/
+sdkconfig.old
+
+# Temporary files
+*.o
+*.a
+*.elf
+*.bin
+*.map
+*.d
+
+# IDE files
+.vscode/.cortex-debug*
+.vscode/ipch/
+.idea/
+*.swp
+*.swo
+*~
+
+# ESP-IDF specific
+managed_components/
+dependencies.lock
